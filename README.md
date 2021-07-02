@@ -13,3 +13,4 @@ Todo:
  - admin login
  - tags
  - statistics
+ - 2-way communication
