@@ -9,7 +9,7 @@ Getting to dashboard: /dashboard.html
 
 Todo:
  - Better styles
- - Vue Framefork
- - login
+ - Vue Framework
+ - admin login
  - tags
- -  statistics
+ - statistics
