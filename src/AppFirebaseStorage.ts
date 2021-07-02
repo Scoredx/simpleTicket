@@ -36,8 +36,8 @@ class AppFirebaseStorage implements IIssue{
         return Promise.resolve(data);
     }
 
-    async updateNote(id: string, note: any){
-        const res = await db.collection('issues').doc(id).update(note);
+    async updateNote(id: string, issue: IIssue){
+        const res = await db.collection('issues').doc(id).update(issue);
     }
 
     async  deleteNote(id: string){
