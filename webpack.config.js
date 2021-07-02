@@ -3,10 +3,13 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: {
+    index: './src/index.ts',
+    dashboard: './src/dashboard.ts',
+  },
   output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist")
+    filename: '[name].js',
+    path: __dirname + '/dist',
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"]
@@ -15,7 +18,7 @@ module.exports = {
   plugins: [
     new CopyPlugin([
       {
-        from: "src/*.html",
+        from: "src/index.html",
         to: "",
         flatten: true
       }

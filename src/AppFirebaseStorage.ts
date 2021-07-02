@@ -9,7 +9,7 @@ class AppFirebaseStorage implements IIssue{
     id: string;
     name: string;
     room: string;
-    problem: string;
+    issueText: string;
     date: string;
     importance: number;
     isDone: boolean;

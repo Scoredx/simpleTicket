@@ -1,0 +1,64 @@
+.issueComponent{
+    width: 230px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color:black;
+    position: relative;
+    font-family: Tahoma;
+}
+
+.issueDate{
+    display:flex;
+    justify-content: center;
+    padding-top: 5px;
+    font-size: 20px;
+    width: 100%;
+    position: absolute;
+    cursor: default;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.issueImportance{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    display:flex;
+    justify-content:center;
+}
+
+.divTool{
+    display:flex;
+    flex-direction: row;
+    margin-top: 35px;
+    font-size: 25px;
+    width: 230px;
+}
+
+.issueName{
+    display:flex;
+    justify-content: center;
+    width: 170px;
+}
+.issueRoom{
+    display:flex;
+    justify-content: center;
+    width: 80px;
+}
+.issueText{
+    position: absolute;
+    margin-top: 65px;
+    height: 180px;
+    width: 230px - 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.issueIsDone{
+    position: absolute;
+
+}

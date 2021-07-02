@@ -2,18 +2,19 @@ import app from './App';
 
 export class Issue{
 
-    saveToNote(id: string, name: string, room: string, problem: string, importance: number, isDone: boolean){
+    saveToNote(id: string, name: string, room: string, issueText: string, importance: number, isDone: boolean){
         let newDate = new Date();
-        let note: IIssue = {
+        let issue: IIssue = {
             id: id,
             name: name,
             room: room,
-            problem: problem,
+            issueText: issueText,
             importance: importance,
             isDone: isDone,
             date: newDate.toISOString().split('T')[0]
         }
-        return note;
+        console.log(issue);
+        return issue;
     }
 }
 export default Issue;
