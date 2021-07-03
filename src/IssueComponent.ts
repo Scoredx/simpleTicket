@@ -1,10 +1,10 @@
+// import { Issue } from './Issue';
 import './SCSS/issueComponent.scss';
+import appFireStorage from './AppFirebaseStorage'
 
 export class IssueComponent{
 
-    
-    createIssue(issue: IIssue){
-
+    createIssue(issue: IIssue){        
         let issueDiv: HTMLDivElement = document.createElement("div");
         issueDiv.className = "issueComponent";
         issueDiv.style.backgroundColor = "white";
@@ -24,25 +24,26 @@ export class IssueComponent{
         issueRoom.contentEditable = "true";
         issueRoom.innerHTML = issue.room;
 
-
         let issueText: HTMLDivElement = document.createElement("div");
         issueText.className = "issueText";
         issueText.innerHTML = issue.issueText;
 
-
         let issueImportance: HTMLDivElement = document.createElement("div");
         issueImportance.className = "issueImportance";
+        this.issueIsDoneEvent(issueImportance, issue);
         this.importanceColor(issue, issueImportance);
         
         issueImportance.addEventListener('click', () => {
             switch(issue.isDone){
                 case false:
                     issue.isDone = true;
+                    this.issueIsDoneEvent(issueImportance, issue);
                     issueImportance.style.backgroundColor = 'green';
                 break;
 
                 case true:
                     issue.isDone = false;
+                    this.issueIsDoneEvent(issueImportance, issue);
                     issueImportance.style.backgroundColor = this.importanceColor(issue, issueImportance);
                 break;
             }
@@ -69,17 +70,28 @@ export class IssueComponent{
     }
 
     importanceColor(issue: IIssue, issueImportance: HTMLDivElement){
-        switch(issue.importance){
-            case 1:
-            return issueImportance.style.backgroundColor = 'yellow';
-
-            case 2:
-            return issueImportance.style.backgroundColor = 'orange';
-
-            case 3:
-            return issueImportance.style.backgroundColor = 'red';
-             
+        if(issue.isDone == true){
+            issueImportance.style.backgroundColor = 'green';
+        }else{
+            switch(issue.importance){
+                case 1:
+                return issueImportance.style.backgroundColor = 'yellow';
+    
+                case 2:
+                return issueImportance.style.backgroundColor = 'orange';
+    
+                case 3:
+                return issueImportance.style.backgroundColor = 'red';
+            }
         }
+    }
+
+    issueIsDoneEvent(issueImportance: HTMLDivElement,  issue: IIssue){
+        issueImportance.addEventListener('click', () => {
+            appFireStorage.updateIssue(issue.id,{
+                isDone: issue.isDone,
+            });
+        });
     }
 }
 

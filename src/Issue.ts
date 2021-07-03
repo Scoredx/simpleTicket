@@ -13,7 +13,6 @@ export class Issue{
             isDone: isDone,
             date: newDate.toISOString().split('T')[0]
         }
-        console.log(issue);
         return issue;
     }
 }

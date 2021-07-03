@@ -13,7 +13,7 @@ submitButton.addEventListener('click', () => {
     let importance: string = (document.querySelector('input[name="importance"]:checked') as HTMLInputElement).value;
     let intImportance = parseInt(importance);
     let newIssue = issue.saveToNote('', inputName.value, roomNumber.value, issueInput.value, intImportance, false);
-    appFireStorage.addNote(newIssue).then(res => {
+    appFireStorage.addIssue(newIssue).then(res => {
         newIssue.id = res;
     });
-});
+}); 

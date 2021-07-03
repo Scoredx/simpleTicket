@@ -5,7 +5,6 @@ const db = firebaseApp.firestore();
 
 class AppFirebaseStorage implements IIssue{
 
-    constructor(){}
     id: string;
     name: string;
     room: string;
@@ -14,7 +13,7 @@ class AppFirebaseStorage implements IIssue{
     importance: number;
     isDone: boolean;
 
-    async  addNote(note: any){
+    async  addIssue(note: any){
         const res: string = await db.collection('issues').add(note)
         .then(function(docRef) {
             return  docRef.id;
@@ -36,13 +35,13 @@ class AppFirebaseStorage implements IIssue{
         return Promise.resolve(data);
     }
 
-    async updateNote(id: string, issue: IIssue){
+    async updateIssue(id: string, issue: any){
         const res = await db.collection('issues').doc(id).update(issue);
     }
 
-    async  deleteNote(id: string){
-        const res = await db.collection('notes').doc(id).delete();
-    }
+    // async  deleteNote(id: string){
+    //     const res = await db.collection('notes').doc(id).delete();
+    // }
 }
 const appFireStorage = new AppFirebaseStorage;
 export default  appFireStorage;
