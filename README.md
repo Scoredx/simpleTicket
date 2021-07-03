@@ -1,4 +1,6 @@
 ﻿Simple ticketing system for my non-technical collegues
+ 
+ 
  Due to lack of easy to use and free ticketing systems
 
 All you need to do is adding Firebase config.ts file with your API keys.
