@@ -1,6 +1,6 @@
 ﻿Simple ticketing system for my non-technical collegues.
 
-All you need to do is to add your Firebase config.ts file.
+All you need to do is adding your Firebase config.ts file.
 
 Launching in VS Code with Webpack
 1. npm i
