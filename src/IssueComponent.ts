@@ -1,4 +1,3 @@
-// import { Issue } from './Issue';
 import './SCSS/issueComponent.scss';
 import appFireStorage from './AppFirebaseStorage'
 
