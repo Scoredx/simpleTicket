@@ -22,6 +22,13 @@ module.exports = {
         to: "",
         flatten: true
       }
+    ]),
+    new CopyPlugin([
+      {
+        from: "src/dashboard.html",
+        to: "",
+        flatten: true
+      }
     ])
   ],
   module: {
