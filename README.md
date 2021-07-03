@@ -1,6 +1,6 @@
 ﻿Simple ticketing system for my non-technical collegues.
 
-All you need to do is adding your Firebase config.ts file with your API keys.
+All you need to do is adding Firebase config.ts file with your API keys.
 
 Launching in VS Code with Webpack
 1. npm i
