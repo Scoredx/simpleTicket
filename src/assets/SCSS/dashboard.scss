@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap%27');
+
+body {
+    background-image: url('https://www.pixel4k.com/wp-content/uploads/2019/04/peaceful-blur-background-4k_1555207903.jpg%22');
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    display:flex;
+    flex-direction: column;
+}
+
+// body {
+//     background-image: url("https://www.pixel4k.com/wp-content/uploads/2019/04/peaceful-blur-background-4k_1555207903.jpg");
+//     font-family: Tahoma;
+//     color:white;
+    
+//     height: 100%;
+// }
+
+.flex1{
+    flex:1;
+}
+.flex0{
+    flex:0;
+}
+
+#topBar{
+    width: 100%;
+    height:80px;
+    display:flex;
+    justify-content: center;
+    background-color: rgb(14, 14, 14);
+    font-size: 20px;
+    #logo{
+        width: 100px;
+        height:100px;
+    }
+}
+
+#mainContainer{
+    width: 100%;
+    min-height: 885px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+#issues{
+    width: 80%;
+    height: 90%;
+    margin-top:30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#footer{
+    width: 100%;
+    height: 20px;
+    display:flex;
+    justify-content: flex-end;
+    align-content: center;
+    font-size: 12px;
+    background-color: black;
+    padding-top: 30px;
+    flex: 1;
+    p{
+        margin-right: 10px;
+    }
+}
+
