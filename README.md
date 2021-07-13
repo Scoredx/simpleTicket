@@ -7,7 +7,7 @@ All you need to do is adding Firebase config.ts file with your API keys.
 
 Launching in VS Code with Webpack
 1. npm i
-2. npm start
+2. npm run serve
 
 Getting to dashboard: /dashboard.html
 
