@@ -12,8 +12,8 @@ Launching in VS Code with Webpack
 Getting to dashboard: /dashboard.html
 
 Todo:
- - Better styles
- - Vue Framework
+ - ~~Better styles~~
+ - ~~Vue Framework~~
  - admin login
  - tags
  - statistics
